@@ -19,14 +19,19 @@
   },
   "dependencies": {
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.4",
+    "redux": "^3.6.0"
   },
   "babel": {
     "presets": [
-      ["env",
+      [
+        "env",
         {
           "targets": {
-            "browsers": ["last 2 versions"]
+            "browsers": [
+              "last 2 versions"
+            ]
           }
         }
       ],
