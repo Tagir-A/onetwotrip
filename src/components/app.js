@@ -1,9 +1,12 @@
 import React from 'react'
+import VisibleFlights from './smarts/visibleFlights'
 
 class App extends React.Component {
     render() {
         return (
-            <h1>Hear me Roar</h1>
+            <div>
+                <VisibleFlights />
+            </div>
         )
     }
 }
