@@ -1,7 +1,7 @@
 import data from '../../data/data.json'
 
 const initialState = {
-    filter: "SHOW_ALL",
+    filter: "Show all",
     flights: data.flights
 }
 

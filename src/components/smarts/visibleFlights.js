@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import FlightCardList from '../dumbs/flightCardList'
 
 function getVisibleFlights(flights, filter) {
-    if (filter == "SHOW_ALL") return flights
+    if (filter == "Show all") return flights
     else return flights.filter(item => {
         return item.carrier == filter
     })
