@@ -1,15 +1,29 @@
 import React from 'react'
 
 function FlightCard({ flight }) {
-    let departure = new Date(flight.departure).toLocaleString("ru-RU")
-    let arrival = new Date(flight.arrival).toLocaleString("ru-RU")
+    let departure = new Date(flight.departure)
+    let arrival = new Date(flight.arrival)
+    let optionsDate = {day: "numeric", month: "long", year: "numeric", weekday: "short"}
+    let optionsTime = {hour: "numeric", minute: "numeric"}
     return (
-        <li>
-            <p className="from">{flight.direction.from}</p>
-            <p className="to">{flight.direction.to}</p>
-            <p className="departure">{departure}</p>
-            <p className="arrival">{arrival}</p>
-            <p className="carrier">{flight.carrier}</p>
+        <li className="flight-card">
+            <div className="carrier">
+                <p className="carrier-txt">{flight.carrier}</p>
+            </div>
+            <div className="details">
+                <div className="from">
+                    <p className="departure time">{departure.toLocaleString("ru-RU", optionsTime)}</p>
+                    <p className="from-txt">{flight.direction.from}</p>
+                    <p className="departure">{departure.toLocaleString("ru-RU", optionsDate)}</p>
+                </div>
+                <div className="to">
+                    <p className="arrival time">{arrival.toLocaleString("ru-RU", optionsTime)}</p>
+                    <p className="to-txt">{flight.direction.to}</p>
+                    <p className="arrival">{arrival.toLocaleString("ru-RU", optionsDate)}</p>
+                </div>
+
+            </div>
+
         </li>
     )
 }

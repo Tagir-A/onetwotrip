@@ -5,9 +5,13 @@ import FilterList from './smarts/filterList'
 class App extends React.Component {
     render() {
         return (
-            <div>
-                <FilterList />
-                <VisibleFlights />
+            <div className="widget">
+                <div className="selector-container styled-select">
+                    <FilterList />
+                </div>
+                <div className="card-list-container">
+                    <VisibleFlights />
+                </div>
             </div>
         )
     }

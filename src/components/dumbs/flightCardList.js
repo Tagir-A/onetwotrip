@@ -3,7 +3,7 @@ import FlightCard from './flightCard'
 
 function FlightCardList({ flights }) {
     return (
-        <ul>
+        <ul className="flight-card-list">
             {flights.map(item =>
                 <FlightCard
                     key={item.id}
