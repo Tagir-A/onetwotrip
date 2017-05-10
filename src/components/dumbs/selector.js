@@ -14,3 +14,5 @@ function Selector({ onChange, filters}) {
         </select>
     )
 }
+
+export default Selector
