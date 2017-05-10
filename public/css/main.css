@@ -38,15 +38,10 @@ body {
     background-color: #f2f2f2;
 }
 
-.card-list-container {
-    /*background-color: lightblue;*/
-}
-
 .flight-card-list {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    /*align-items: ;*/
     align-content: space-between;
 }
 
