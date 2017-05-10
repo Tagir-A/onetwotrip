@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import Selector from '../dumbs/selector'
+import { setFilter } from '../../actions/actions'
 
 function getFilters (flights) {
     let filters = new Set().add("Show all")
@@ -12,7 +13,15 @@ function mapStateToProps (state) {
         filters: getFilters(state.flights)
     }
 }
+function mapDispatchToProps (dispatch) {
+    return {
+        onChange: () => {
+            let filter = document.getElementById("selector").value
+            dispatch(setFilter(filter))
+        }
+    }
+}
 
-const FilterList = connect(mapStateToProps)(Selector)
+const FilterList = connect(mapStateToProps, mapDispatchToProps)(Selector)
 
 export default FilterList
